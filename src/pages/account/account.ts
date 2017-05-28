@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 
 //importing the account class from external decleration
 import { Account } from './accountClass';
+import { HTTP } from '@ionic-native/http';
 
 //filling the account class
 const ACCOUNTS: Account[] = [
@@ -16,27 +17,30 @@ const ACCOUNTS: Account[] = [
   selector: 'page-account-ionic',
   templateUrl: 'account.html'
 })
+
 export class AccountPage {
   //declaring it for view
   accounts = ACCOUNTS;
-  posts: any;
+  posts: any;  
   
-  // constructor(private http: HTTP){
-   
-  //   this.http.get('http://ionic.io', {}, {}).then(data=>{
+ constructor(private http: HTTP){
+    console.log("hey");
+    this.http.get('http://httpbin.org/ip', {}, {}).then(data=>{
     
-  //   console.log(data.status);
-  //   console.log(data.data); // data received by server
-  //   console.log(data.headers);
+    this.posts = data.data;
+    console.log(data.status);
+    console.log(data.data); // data received by server
+    console.log(data.headers);
 
-  // })
-  // .catch(error => {
+  })
+  .catch(error => {
 
-  //   console.log(error.status);
-  //   console.log(error.error); // error message as string
-  //   console.log(error.headers);
-  // });
+    console.log(error.status);
+    console.log(error.error); // error message as string
+    console.log(error.headers);
+  });
     
-  // }  
+  }  
 
 }
+

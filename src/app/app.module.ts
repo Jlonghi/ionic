@@ -8,7 +8,7 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 
-//import { HTTP } from '@ionic-native/http';
+import { HTTP } from '@ionic-native/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -33,7 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	  AccountPage
   ],
   providers: [
-    //HTTP,
+    HTTP,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
