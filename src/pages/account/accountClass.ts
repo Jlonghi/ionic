@@ -1,3 +1,4 @@
+//account class without getters and setters yet
 export class Account {
     UserID: number;
     Username: string;

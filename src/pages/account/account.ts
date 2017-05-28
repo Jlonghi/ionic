@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 import { Account } from './accountClass';
 import { HTTP } from '@ionic-native/http';
 
-//filling the account class
+//filling the account class with arbitriary data
 const ACCOUNTS: Account[] = [
   { UserID: 11, Username:"Joe" , Email:"", Password:"Joe1985", TypeID: 1, Status: 0, SettingsID: 1},
   { UserID: 12, Username:"chris", Email:"", Password:"Chris123", TypeID: 1, Status: 0, SettingsID: 1 }
@@ -19,10 +19,12 @@ const ACCOUNTS: Account[] = [
 })
 
 export class AccountPage {
-  //declaring it for view
+  //declaring variables for the view
   accounts = ACCOUNTS;
+  //http test variable
   posts: any;  
-  
+
+ //testing out http requests for future requests to php server 
  constructor(private http: HTTP){
     
     this.http.get('http://httpbin.org/ip', {}, {}).then(data=>{

@@ -11,10 +11,12 @@
 
   <h3>Welcome</h3>
   <ion-list>
+  <!-- printing out accoutns variable with *ngFor -->
 	<button ion-item *ngFor="let account of accounts">
 		<ion-icon name="bluetooth" item-left></ion-icon>
 		<p>{{account.UserID}} {{account.Username}} {{account.Email}} {{account.SettingsID}}</p>
 	</button>
+  <!-- http test !-->
   <ion-item *ngFor="let post of posts">
     <div>{{post}}</div>
   </ion-item>
