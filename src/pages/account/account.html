@@ -13,7 +13,7 @@
   <ion-list>
 	<button ion-item *ngFor="let account of accounts">
 		<ion-icon name="bluetooth" item-left></ion-icon>
-		<p>{{account.id}} {{account.name}}</p>
+		<p>{{account.UserID}} {{account.Username}} {{account.Email}} {{account.SettingsID}}</p>
 	</button>
   <ion-item *ngFor="let post of posts">
     <div>{{post}}</div>

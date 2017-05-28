@@ -9,8 +9,8 @@ import { HTTP } from '@ionic-native/http';
 
 //filling the account class
 const ACCOUNTS: Account[] = [
-  { id: 11, name:"hi" },
-  { id: 12, name:"chris" }
+  { UserID: 11, Username:"Joe" , Email:"", Password:"Joe1985", TypeID: 1, Status: 0, SettingsID: 1},
+  { UserID: 12, Username:"chris", Email:"", Password:"Chris123", TypeID: 1, Status: 0, SettingsID: 1 }
 ];
 
 @Component({
@@ -24,7 +24,7 @@ export class AccountPage {
   posts: any;  
   
  constructor(private http: HTTP){
-    console.log("hey");
+    
     this.http.get('http://httpbin.org/ip', {}, {}).then(data=>{
     
     this.posts = data.data;

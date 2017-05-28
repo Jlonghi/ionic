@@ -1,4 +1,9 @@
 export class Account {
-    id: number;
-    name: string;
+    UserID: number;
+    Username: string;
+    Email: string;
+    Password: string;
+    TypeID: number;
+    Status: number;
+    SettingsID: number;
 }
