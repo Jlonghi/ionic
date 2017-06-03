@@ -1,15 +1,37 @@
 <ion-header>
   <ion-navbar>
-    <button menuToggle *ngIf="!selectedItem">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Account</ion-title>
+    <ion-row>
+      <ion-col col-auto>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-auto>
+        <ion-input id="searchBar" type="text" placeholder="Search for a location"></ion-input>
+      </ion-col>
+      <ion-col>
+        <button ion-button id="searchBarSearch">search</button>
+      </ion-col>
+      <ion-col  col-auto>
+        <!--<label for="userName">Username:</label>-->
+        <ion-input name="userName" id="userName" placeholder="Username" type="text"></ion-input>
+      </ion-col>
+      <ion-col col-auto>
+        <ion-input id="password" placeholder="password" type="password"></ion-input>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button id="login">Login</button>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button id="register">Register</button>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <h3>Welcome</h3>
+  <ion-title>Welcome to Accounts</ion-title>
   <ion-list>
   <!-- printing out accoutns variable with *ngFor -->
 	<button ion-item *ngFor="let account of accounts">
